@@ -191,27 +191,38 @@ export default function SupportStudentPage() {
                                 <CardDescription>{tr.paymentDesc(amount)}</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form id="payment-form" onSubmit={handlePaymentSubmit} className="space-y-4">
-                                    <Input
-                                        label={tr.momoLabel}
-                                        placeholder={tr.momoPlaceholder}
-                                        required
-                                        value={phone}
-                                        onChange={(e) => setPhone(e.target.value)}
-                                        pattern="^07[2-9][0-9]{7}$"
-                                        title="Enter a valid Rwandan mobile number"
-                                    />
-                                </form>
+                                <div className="space-y-4 text-center">
+                                    <p className="text-sm font-medium text-foreground">
+                                        {lang === "Français"
+                                            ? "Veuillez appeler le code USSD ci-dessous pour finaliser votre contribution :"
+                                            : lang === "Kinyarwanda"
+                                                ? "Kanda iyi kode hasi kugirango usoze gutanga inkunga:"
+                                                : "Please dial the USSD code below to complete your contribution:"
+                                        }
+                                    </p>
+                                    <div className="bg-secondary/50 p-4 rounded-xl border border-primary/20">
+                                        <p className="text-2xl font-bold tracking-wider text-primary break-all">
+                                            *182*1*1*0780602022*{amount}#
+                                        </p>
+                                    </div>
+                                    <p className="text-xs text-muted-foreground mt-2">
+                                        {lang === "Français"
+                                            ? "Après avoir payé, cliquez sur le bouton ci-dessous."
+                                            : lang === "Kinyarwanda"
+                                                ? "Numara kwishyura kanda buto iri hasi."
+                                                : "After paying, please click the button below."
+                                        }
+                                    </p>
+                                </div>
                             </CardContent>
                             <CardFooter className="flex flex-col space-y-3">
                                 <Button
-                                    form="payment-form"
-                                    type="submit"
+                                    onClick={handlePaymentSubmit}
                                     className="w-full"
                                     size="lg"
                                     isLoading={isProcessing}
                                 >
-                                    {isProcessing ? tr.processing : tr.payBtn(amount)}
+                                    {isProcessing ? tr.processing : (lang === "Français" ? "J'ai payé" : lang === "Kinyarwanda" ? "Nishyuye" : "I have paid")}
                                 </Button>
                                 <Button
                                     variant="ghost"
@@ -250,8 +261,13 @@ export default function SupportStudentPage() {
                             </CardHeader>
                             <CardContent className="space-y-6">
                                 <div className="rounded-lg bg-secondary/50 p-5 text-center text-sm leading-relaxed border border-border/50">
-                                    <p className="font-semibold text-foreground text-base">
-                                        You have successfully contributed <span className="text-primary">{amount} RWF</span>.
+                                    <p className="font-medium text-foreground text-sm">
+                                        {lang === "Français"
+                                            ? "Cet argent ira aux étudiants de 4ward, un groupe qui a créé ce système qui aide l'école à coordonner facilement et avec succès les jours de visite."
+                                            : lang === "Kinyarwanda"
+                                                ? "Aya mafaranga azahabwa abanyeshuri ba 4ward, itsinda ryakoze ubu buryo bufasha ikigo guhuza neza kandi mu buryo bworoshye iminsi yo gusura."
+                                                : "This money will be going to students 4ward a group that created this system that helps the school to easily and successfully coordinate Visit days."
+                                        }
                                     </p>
                                 </div>
                             </CardContent>
