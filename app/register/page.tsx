@@ -353,12 +353,6 @@ export default function RegistrationPage() {
         {/* Sticky Footer matching reference */}
         <div className="bg-card border-t border-border px-4 sm:px-8 py-5 sm:py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between mt-4 gap-4">
           <div>
-            <p className="text-xl font-bold text-[#153d5d] dark:text-white">
-              {tr.totalPrice}: {calculateTotal(Number(visitorCount) || 0)} RWF
-            </p>
-            <p className="text-sm text-[#153d5d] dark:text-white mt-1 font-medium">
-              {tr.paymentNote}
-            </p>
             <p className="text-xs text-muted-foreground dark:text-gray-400 mt-2">
               By clicking the button you agree to our{" "}
               <a href="#" className="underline">
