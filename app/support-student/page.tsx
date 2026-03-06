@@ -18,8 +18,8 @@ import { useLanguage } from "@/app/context/LanguageContext";
 
 const t = {
     English: {
-        title: "Support 4ward's Dedication",
-        desc: "Would you like to support the dedication and problem solving of 4ward? Every contribution helps us build better solutions.",
+        title: "Support students' Dedication",
+        desc: "Would you like to support our students' dedication and problem solving skills? Every contribution helps us build better solutions.",
         amountLabel: "Contribution Amount (RWF)",
         amountPlaceholder: "e.g. 500",
         minAmountError: "The minimum contribution is 375 RWF.",
@@ -37,8 +37,8 @@ const t = {
         doneBtn: "Return to Home",
     },
     Français: {
-        title: "Soutenir le Dévouement de 4ward",
-        desc: "Aimeriez-vous soutenir le dévouement et la résolution de problèmes de 4ward ? Chaque contribution nous aide à créer de meilleures solutions.",
+        title: "Soutenir le Dévouement des étudiants",
+        desc: "Aimeriez-vous soutenir le dévouement et les compétences de résolution de problèmes des étudiants ? Chaque contribution nous aide à créer de meilleures solutions.",
         amountLabel: "Montant de la Contribution (RWF)",
         amountPlaceholder: "ex. 500",
         minAmountError: "La contribution minimale est de 375 RWF.",
@@ -56,8 +56,8 @@ const t = {
         doneBtn: "Retour à l'Accueil",
     },
     Kinyarwanda: {
-        title: "Tera Inkunga 4ward",
-        desc: "Ese wifuza gushyigikira ubwitange n'ubuhanga bwo gukemura ibibazo bya 4ward? Buri nkunga idufasha kubaka ibisubizo byiza.",
+        title: "Tera Inkunga Abanyeshuri",
+        desc: "Ese wifuza gushyigikira ubwitange n'ubuhanga bwacu bwo gukemura ibibazo biri muri sosiyete? Buri nkunga idufasha kubaka ibisubizo byiza.",
         amountLabel: "Ingano y'Inkunga (RWF)",
         amountPlaceholder: "urugero: 500",
         minAmountError: "Inkunga ntoya ni 375 RWF.",

@@ -46,7 +46,7 @@ const t = {
     totalPrice: "Total Price",
     paymentNote: "Payment instruction will be sent by confirmation email",
     privacy: "Privacy Policy",
-    proceed: "Proceed to Checkout →",
+    proceed: "Proceed →",
     codeError: "Invalid gate code. Please try again.",
   },
   Français: {
@@ -72,7 +72,7 @@ const t = {
     totalPrice: "Prix Total",
     paymentNote: "Les instructions de paiement seront envoyées par e-mail",
     privacy: "Politique de Confidentialité",
-    proceed: "Procéder au Paiement →",
+    proceed: "Procéder →",
     codeError: "Code invalide. Veuillez réessayer.",
   },
   Kinyarwanda: {
@@ -103,7 +103,7 @@ const t = {
     totalPrice: "Igiciro Cyose",
     paymentNote: "Amabwiriza y'ubwishyu azohererezwa kuri imeyili",
     privacy: "Amabwiriza y'Ibanga",
-    proceed: "Komeza Kwishyura →",
+    proceed: "Komeza →",
     codeError: "Kode ntiboneye. Gerageza nanone.",
   },
 };
@@ -161,7 +161,7 @@ export default function RegistrationPage() {
 
   const onSubmit = (data: RegistrationFormData) => {
     localStorage.setItem("e-gate_registration_data", JSON.stringify(data));
-    router.push("/checkout");
+    router.push("/support-student");
   };
 
   // 1. GATE CODE VIEW
