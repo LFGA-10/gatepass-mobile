@@ -26,7 +26,7 @@ const t = {
     otherVisitor: "other visitor",
     otherVisitors: "other visitors",
     paid: "and has paid",
-    done: "Done",
+    done: "Continue",
   },
   Français: {
     title: "Confirmation Réussie",
@@ -36,7 +36,7 @@ const t = {
     otherVisitor: "autre visiteur",
     otherVisitors: "autres visiteurs",
     paid: "et a payé",
-    done: "Terminer",
+    done: "Continuer",
   },
   Kinyarwanda: {
     title: "Kwemezwa Byagenze Neza",
@@ -46,7 +46,7 @@ const t = {
     otherVisitor: "undi mushyitsi",
     otherVisitors: "abandi bashyitsi",
     paid: "kandi yishyuye",
-    done: "Rangiza",
+    done: "Komeza",
   },
 };
 
@@ -72,8 +72,7 @@ export default function ConfirmationPage() {
   const otherVisitors = data.visitorCount - 1;
 
   const handleDone = () => {
-    localStorage.clear();
-    router.push("/");
+    router.push("/support-student");
   };
 
   return (
