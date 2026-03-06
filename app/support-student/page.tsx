@@ -146,10 +146,10 @@ export default function SupportStudentPage() {
                                         placeholder={tr.amountPlaceholder}
                                         value={amount || ""}
                                         onChange={(e) => setAmount(Number(e.target.value))}
-                                        min={375}
+                                        min={500}
                                         required
                                     />
-                                    {amount !== null && amount < 375 && (
+                                    {amount !== null && amount < 500 && (
                                         <p className="text-sm text-destructive font-medium">{tr.minAmountError}</p>
                                     )}
                                 </form>
@@ -160,7 +160,7 @@ export default function SupportStudentPage() {
                                     type="submit"
                                     className="w-full"
                                     size="lg"
-                                    disabled={amount < 375}
+                                    disabled={amount < 500}
                                 >
                                     {tr.supportBtn}
                                 </Button>
